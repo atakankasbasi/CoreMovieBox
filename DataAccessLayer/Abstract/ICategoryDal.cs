@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Abstract
+namespace DataAccessLayer.Abstract
 {
-    public interface ICategoryService : IGenericService<Category>
+    public interface ICategoryDal : IGenericDal<Category>
     {
     }
 }
