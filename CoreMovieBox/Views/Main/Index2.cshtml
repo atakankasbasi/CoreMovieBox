@@ -1,0 +1,116 @@
+﻿@using EntityLayer.Concrete
+@model List<TvSerie>
+@{
+    ViewData["Title"] = "Index2";
+    Layout = "~/Views/Shared/StartView.cshtml";
+    int sayac = 0;
+}
+
+
+
+<div class="">
+    <div class="row d-flex justify-content-end">
+        <div class="col-2">
+
+            <h4 class="card-title" style="color:white; margin-left:70px; ">Haftanın en iyi 10 Tv Dizisi</h4>
+            <br />
+            <p class="card-description" style="margin-left:70px;">
+                Haftanın en popüler TV dizilerini ve onları nerede izleyeceğinizi keşfedin.
+            </p>
+
+        </div>
+
+
+
+        <div class="col-10">
+
+            <div class="col-lg mx-auto  pb-5">
+
+                <div class="wrapper">
+
+                    <section id="section1">
+                        <a href="#section3" class="arrow__btn">‹</a>
+
+
+                        @foreach (var item in Model)
+                        {
+                            @if (sayac < 4)
+                            {
+                                sayac++;
+
+                                <div class="item">
+                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                        <h1 class="card-title" style="font-size:15rem; padding-top:5px">@sayac</h1>
+                                        <img class="" style=" width: 15rem; height:20rem;" src="@item.Image1" />
+                                    </div>
+                                </div>
+                            }
+
+                        }
+
+
+
+
+                        <a href="#section2" class="arrow__btn">›</a>
+                    </section>
+
+
+
+                    <section id="section2">
+                        <a href="#section1" class="arrow__btn">‹</a>
+
+                        @foreach (var item in Model)
+                        {
+                            @if (sayac < 8)
+                            {
+                                sayac++;
+
+                                <div class="item">
+                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                        <h1 class="card-title" style="font-size:15rem; padding-top:5px">@sayac</h1>
+                                        <img class="" style=" width: 15rem; height:20rem;" src="@item.Image1" />
+                                    </div>
+                                </div>
+                            }
+
+                        }
+
+
+
+
+                        <a href="#section3" class="arrow__btn">›</a>
+                    </section>
+
+
+
+
+                    <section id="section3">
+                        <a href="#section2" class="arrow__btn">‹</a>
+
+                        @foreach (var item in Model)
+                        {
+                            @if (sayac < 10)
+                            {
+                                sayac++;
+
+                                <div class="item">
+                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                        <h1 class="card-title" style="font-size:15rem; padding-top:5px">@sayac</h1>
+                                        <img class="" style=" width: 15rem; height:20rem;" src="@item.Image1" />
+                                    </div>
+                                </div>
+                            }
+
+                        }
+
+
+                        <a href="#section3" class="arrow__btn">›</a>
+                    </section>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

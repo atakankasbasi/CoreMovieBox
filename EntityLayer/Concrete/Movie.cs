@@ -21,15 +21,13 @@ namespace EntityLayer.Concrete
         public string? Image2 { get; set; }
         public string? Image3 { get; set; }
         public string? Image4 { get; set; }
-        public int? MovieGenre { get; set; }
-        public int? MovieCategory { get; set; }
         public int? MovieScore { get; set;}
         [StringLength(20)]
         public string? MovieYear { get; set;}
         public int? MovieTime { get; set; }
         public bool? Status { get; set; }
 
-        public int? CategoryId { get; set; }
+        public int? CategoryID { get; set; }
         public Category? Category { get; set; }
         public List<Comment> Comments { get; set; }
     }
