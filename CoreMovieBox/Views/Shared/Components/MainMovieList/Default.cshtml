@@ -15,7 +15,7 @@
 </div>
 
 <div class="">
-    <div class="row d-flex justify-content-end">
+    <div class="row d-flex">
         <div class="col-2">
 
             <h4 class="card-title" style="color:white; margin-left:70px; ">Haftanın en iyi 10 filmi</h4>
@@ -25,98 +25,102 @@
             </p>
 
         </div>
-
-
+         
 
         <div class="col-10">
 
-            <div class="col-lg mx-auto  pb-5">
+            <div class="col-11">
+                <div class="col-lg mx-auto  pb-5">
 
-                <div class="wrapper">
+                    <div class="wrapper">
 
-                    <section id="section1">
-                        <a href="#section3" class="arrow__btn">‹</a>
+                        <section id="section1">
+                            <a href="#section3" class="arrow__btn">‹</a>
 
 
-                        @foreach (var item in Model)
-                        {
-                            @if (sayac < 4)
+                            @foreach (var item in Model)
                             {
-                                sayac++;
+                                @if (sayac < 4)
+                                {
+                                    sayac++;
 
-                                <div class="item">
-                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
-                                        <h1 class="card-title" style="font-size:15rem; padding-top:5px">@sayac</h1>
-                                        <img class="" style=" width: 15rem; height:20rem;" src="@item.Image1" />
+                                    <div class="item">
+                                        <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                            <h1 class="card-title" style="font-size:14rem; padding-top:90px; ">@sayac</h1>
+                                            <img class="" style=" width: 15rem; height:20rem; margin-left:-30px" src="@item.Image1" />
+                                        </div>
                                     </div>
-                                </div>
+                                }
+
                             }
 
-                        }
 
 
 
-
-                        <a href="#section2" class="arrow__btn">›</a>
-                    </section>
-
+                            <a href="#section2" class="arrow__btn">›</a>
+                        </section>
 
 
-                    <section id="section2">
-                        <a href="#section1" class="arrow__btn">‹</a>
 
-                        @foreach (var item in Model)
-                        {
-                            @if (sayac < 8)
+                        <section id="section2">
+                            <a href="#section1" class="arrow__btn">‹</a>
+
+                            @foreach (var item in Model)
                             {
-                                sayac++;
+                                @if (sayac < 8)
+                                {
+                                    sayac++;
 
-                                <div class="item">
-                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
-                                        <h1 class="card-title" style="font-size:15rem; padding-top:5px">@sayac</h1>
-                                        <img class="" style=" width: 15rem; height:20rem;" src="@item.Image1" />
+                                    <div class="item">
+                                        <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                            <h1 class="card-title" style="font-size:14rem; padding-top:90px; ">@sayac</h1>
+                                            <img class="" style=" width: 15rem; height:20rem; margin-left:-30px" src="@item.Image1" />
+                                        </div>
                                     </div>
-                                </div>
+                                }
+
                             }
 
-                        }
+
+
+
+                            <a href="#section3" class="arrow__btn">›</a>
+                        </section>
 
 
 
 
-                        <a href="#section3" class="arrow__btn">›</a>
-                    </section>
+                        <section id="section3">
+                            <a href="#section2" class="arrow__btn">‹</a>
 
-
-
-
-                    <section id="section3">
-                        <a href="#section2" class="arrow__btn">‹</a>
-
-                        @foreach (var item in Model)
-                        {
-                            @if (sayac < 10)
+                            @foreach (var item in Model)
                             {
-                                sayac++;
+                                @if (sayac < 10)
+                                {
+                                    sayac++;
 
-                                <div class="item">
-                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
-                                        <h1 class="card-title" style="font-size:15rem; padding-top:5px">@sayac</h1>
-                                        <img class="" style=" width: 15rem; height:20rem;" src="@item.Image1" />
+                                    <div class="item">
+                                        <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                            <h1 class="card-title" style="font-size:14rem; padding-top:90px; ">@sayac</h1>
+                                            <img class="" style=" width: 15rem; height:20rem; margin-left:-30px" src="@item.Image1" />
+                                        </div>
                                     </div>
-                                </div>
+                                }
+
                             }
 
-                        }
 
-
-                        <a href="#section3" class="arrow__btn">›</a>
-                    </section>
+                            <a href="#section3" class="arrow__btn">›</a>
+                        </section>
 
 
 
+                    </div>
                 </div>
             </div>
+
+            <div class="col-1"></div>
+
         </div>
     </div>
 </div>
