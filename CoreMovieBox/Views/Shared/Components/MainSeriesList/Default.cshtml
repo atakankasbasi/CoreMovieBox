@@ -1,0 +1,106 @@
+﻿@using EntityLayer.Concrete
+@model List<TvSerie>
+
+
+
+
+<div class="">
+    <div class="row d-flex">
+        <div class="col-2">
+
+            <h4 class="card-title" style="color:white; margin-left:70px; ">Haftanın en iyi 10 dizisi</h4>
+            <br />
+            <p class="card-description" style="margin-left:70px;">
+                Haftanın en popüler dizilerini ve onları nerede izleyeceğinizi keşfedin.
+            </p>
+
+        </div>
+
+
+        <div class="col-10">
+
+            <div class="col-11">
+                <div class="col-lg mx-auto  pb-5">
+
+                    <div class="wrapper">
+
+                        <section id="section11">
+                            <a href="#section33" class="arrow__btn">‹</a>
+
+
+                            @for (int i = 1; i <= 4; i++)
+                            {
+
+                                <div class="item">
+                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                        <h1 class="card-title" style="font-size:14rem; padding-top:90px; ">@i</h1>
+                                        <img class="" style=" width: 15rem; height:20rem; margin-left:-30px" src="@Model[i-1].Image1" />
+                                    </div>
+                                </div>
+
+
+                            }
+
+
+
+
+                            <a href="#section22" class="arrow__btn">›</a>
+                        </section>
+
+
+
+                        <section id="section22">
+                            <a href="#section11" class="arrow__btn">‹</a>
+
+                            @for (int i = 5; i <= 8; i++)
+                            {
+
+                                <div class="item">
+                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                        <h1 class="card-title" style="font-size:14rem; padding-top:90px; ">@i</h1>
+                                        <img class="" style=" width: 15rem; height:20rem; margin-left:-30px" src="@Model[i-1].Image1" />
+                                    </div>
+                                </div>
+
+
+                            }
+
+
+
+
+                            <a href="#section33" class="arrow__btn">›</a>
+                        </section>
+
+
+
+
+                        <section id="section33">
+                            <a href="#section22" class="arrow__btn">‹</a>
+
+                            @for (int i = 9; i <= 10; i++)
+                            {
+
+                                <div class="item">
+                                    <div class="col-lg mx-auto pb-5 d-flex flex-row ">
+                                        <h1 class="card-title" style="font-size:14rem; padding-top:90px; ">@i</h1>
+                                        <img class="" style=" width: 15rem; height:20rem; margin-left:-30px" src="@Model[i-1].Image1" />
+                                    </div>
+                                </div>
+
+
+                            }
+
+                            <a href="#section33" class="arrow__btn">›</a>
+                        </section>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+        </div>
+    </div>
+</div>
