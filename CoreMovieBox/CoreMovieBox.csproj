@@ -25,7 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\PartialLayout\" />
     <Folder Include="wwwroot\Temalar\Tema2\examples\" />
   </ItemGroup>
 
