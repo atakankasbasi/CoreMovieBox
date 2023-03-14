@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=MUHAMMET; database=CoreMoviesDB;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=(localdb)\\MSSQLLocalDB; database=CoreMoviesDB;integrated security=true;");
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
