@@ -7,9 +7,9 @@
 
 <body class="g-sidenav-show">
 
+    @await Html.PartialAsync("~/Views/PartialLayout/HomePage/NavbarPartial.cshtml")
 
     @await Html.PartialAsync("~/Views/PartialLayout/HomePage/HeaderPartial.cshtml")
-
 
     <div style="background-color:black">
         <div class="card card-body blur shadow-blur mx-5 mx-md-5 mt-n5 " id="git">
@@ -28,18 +28,13 @@
 
     @RenderBody()
 
-  
-
     @await Html.PartialAsync("~/Views/PartialLayout/HomePage/JumbotronPartial.cshtml")
-
- 
 
     @await Html.PartialAsync("~/Views/PartialLayout/HomePage/YeniFilmPartial.cshtml")
 
     @await Html.PartialAsync("~/Views/PartialLayout/HomePage/TvDizileriPartial.cshtml")
 
     @await Html.PartialAsync("~/Views/PartialLayout/HomePage/MacPartial.cshtml")
-
 
     @await Html.PartialAsync("~/Views/PartialLayout/HomePage/FooterPartial.cshtml")
 
