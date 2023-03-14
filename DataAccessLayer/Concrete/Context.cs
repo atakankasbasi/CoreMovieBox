@@ -12,12 +12,15 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=MUHAMMET; database=MoviesDB;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=MUHAMMET; database=CoreMoviesDB;integrated security=true;");
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<TvSerie> TvSeries { get; set; }
+
+        public DbSet<Top10MovieList> Top10MovieLists { get; set; }
+        public DbSet<Top10TvSerieList> Top10TvSerieLists { get; set; }
 
     }
 }

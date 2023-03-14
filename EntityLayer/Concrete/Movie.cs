@@ -12,19 +12,16 @@ namespace EntityLayer.Concrete
         [Key]
         public int MovieID { get; set; }
         [StringLength(40)]
-        public string? Title { get; set; }
-        [StringLength(600)]
+        public string? Name { get; set; }
         public string? Content { get; set; }
-        public DateTime? History { get; set; }
         public string? HeaderImage { get; set; }
         public string? Image1 { get; set; }
         public string? Image2 { get; set; }
         public string? Image3 { get; set; }
         public string? Image4 { get; set; }
-        public int? MovieScore { get; set;}
+        public double? MovieScore { get; set;}
         [StringLength(20)]
-        public string? MovieYear { get; set;}
-        public int? MovieTime { get; set; }
+        public int? MovieYear { get; set;}
         public bool? Status { get; set; }
 
         public int? CategoryID { get; set; }
