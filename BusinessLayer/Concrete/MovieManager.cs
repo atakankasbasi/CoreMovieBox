@@ -34,7 +34,7 @@ namespace BusinessLayer.Concrete
            return _movieDal.GetList();
         }
 
-        public List<Movie> TGetListByFilter(Expression<Func<Movie, bool>> filter)
+		public List<Movie> TGetListByFilter(Expression<Func<Movie, bool>> filter)
         {
            return _movieDal.GetListByFilter(filter);
         }
