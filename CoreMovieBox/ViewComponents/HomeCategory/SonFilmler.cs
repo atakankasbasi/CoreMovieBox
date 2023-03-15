@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CoreMovieBox.ViewComponents
+namespace CoreMovieBox.ViewComponents.HomeCategory
 {
-	public class HomeSlider2 : ViewComponent
+	public class SonFilmler : ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{

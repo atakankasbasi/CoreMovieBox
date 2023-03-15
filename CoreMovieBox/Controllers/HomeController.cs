@@ -46,6 +46,10 @@ namespace CoreMovieBox.Controllers
         {
             return View();
         }
+		public IActionResult Start4()
+		{
+			return View();
+		}
 
-    }
+	}
 }

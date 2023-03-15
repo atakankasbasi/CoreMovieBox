@@ -222,23 +222,23 @@ body {
     clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
   }
 }
-a.btn.btn-style{
-  padding: 10px 30px;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 600;
-  transition: 0.3s ease-in;
-  border-radius:4px;
-  border:1px solid #fff;
-  margin-top:2em;
-  display:inline-block;
-  color:#fff;
+a.btn.btn-style {
+    padding: 10px 30px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+    border-radius: 4px;
+    border: 1px solid #fbc500;
+    margin-top: 2em;
+    display: inline-block;
+    color: #fbc500;
 }
-a.btn.btn-style:hover {
-  color:#457b9d;
-  background-color: #fff;
-  border:1px soliod #fff;
-}
+    a.btn.btn-style:hover {
+        color: #457b9d;
+        background-color: #fbc500;
+        border: 1px soliod #fbc500;
+    }
 /*--//Error-Page--*/
 .w3layouts-copyright {
   text-align: center;
