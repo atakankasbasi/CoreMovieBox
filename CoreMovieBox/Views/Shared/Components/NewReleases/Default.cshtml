@@ -1,0 +1,54 @@
+﻿@model List<EntityLayer.Concrete.Movie>
+
+
+
+<section class="w3l-grids">
+	<div class="grids-main py-5">
+		<div class="container py-lg-3">
+			<div class="headerhny-title">
+				<div class="w3l-title-grids">
+					<div class="headerhny-left">
+						<h3 class="hny-title">VİZYONA GİRENLER</h3>
+					</div>
+					<div class="headerhny-right text-lg-right">
+						<h4><a class="show-title" href="genre.html">Tümünü Göster</a></h4>
+					</div>
+				</div>
+			</div>
+			<div class="owl-three owl-carousel owl-theme">
+				@for(int i=0; i<6; i++)
+				{
+						<div class="item vhny-grid">
+					<div class="box16 mb-0">
+						<a href="genre.html">
+							<figure>
+								<img class="img-fluid" src="@Model[i].Image1" alt="">
+							</figure>
+							<div class="box-content">
+								<h4>
+									<span class="post">
+										<span class="fa fa-clock-o"> </span> 2 hr 4 m
+
+									</span>
+
+									<span class="post fa fa-heart text-right"></span>
+								</h4>
+							</div>
+							<span class="fa fa-play video-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<h3> <a class="title-gd" href="genre.html">@Model[i].Name</a></h3>
+					<p>@Model[i].Content.Substring(0,55)...</p>
+					<div class="button-center text-center mt-4">
+						<a href="genre.html" class="btn watch-button">Hemen İzle</a>
+					</div>
+
+				</div>
+				
+				}
+			
+			</div>
+		</div>
+
+	</div>
+</section>

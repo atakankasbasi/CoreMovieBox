@@ -14246,31 +14246,30 @@ body a {
 }
 
 .watch-button {
-  padding: 0px 40px;
-  color: var(--theme-blue);
-  height: 44px;
-  display: block;
-  font-size: 16px;
-  line-height: 41px;
-  font-weight: 600;
-  transition: 0.3s ease-in;
-  border-radius: 6px;
-  background-color: transparent;
-  border: 2px solid var(--theme-blue);
-  width: 100%;
+    padding: 0px 40px;
+    color: #fbc500;
+    height: 44px;
+    display: block;
+    font-size: 16px;
+    line-height: 41px;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 2px solid #fbc500;
+    width: 100%;
 }
 
-.watch-button:hover {
-  background-color: var(--theme-blue);
-  border: 2px solid var(--theme-blue);
-  color: #fff;
-  transition: 0.5s ease-out;
-  -webkit-transition: 0.5s ease-out;
-  -o-transition: 0.5s ease-out;
-  -moz-transition: 0.5s ease-out;
-  -ms-transition: 0.5s ease-out;
-
-}
+    .watch-button:hover {
+        background-color: #fbc500;
+        border: 2px solid #fbc500;
+        color: #fff;
+        transition: 0.5s ease-out;
+        -webkit-transition: 0.5s ease-out;
+        -o-transition: 0.5s ease-out;
+        -moz-transition: 0.5s ease-out;
+        -ms-transition: 0.5s ease-out;
+    }
 
 .read-button {
   padding: 0px 30px;
@@ -14283,7 +14282,7 @@ body a {
   font-weight: 600;
   transition: 0.3s ease-in;
   border-radius: 6px;
-  background-color: var(--theme-rose);
+  background-color: #ffc107;
   border: 2px solid var(--theme-rose);
 }
 
