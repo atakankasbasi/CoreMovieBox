@@ -4,15 +4,15 @@ using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
-namespace CoreMovieBox.ViewComponents
+namespace CoreMovieBox.ViewComponents.BeginPage
 {
-    public class MainSeriesList:ViewComponent
+    public class MainMovieList : ViewComponent
     {
-        //TvSerieManager tvSerieManager = new TvSerieManager(new EfTvSerieDal());
+        //MovieManager movieManager = new MovieManager(new EfMovieDal());
         Context c = new Context();
         public IViewComponentResult Invoke()
         {
-            var values = c.Top10TvSerieLists.ToList();
+            var values = c.Top10MovieLists.ToList();
             return View(values);
         }
     }
