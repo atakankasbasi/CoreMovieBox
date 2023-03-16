@@ -34,22 +34,23 @@ namespace CoreMovieBox.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult Start()
-        {
-            return View();
-        }
-        public IActionResult Start2()
-        {
-            return View();
-        }
-        public IActionResult Start3()
-        {
-            return View();
-        }
-		public IActionResult Start4()
-		{
-			return View();
-		}
 
-	}
+        public IActionResult Landing()
+        {
+            return View();
+        }
+        public IActionResult Anasayfa()
+        {
+            return View();
+        }
+        public IActionResult KategoriList()
+        {
+            return View();
+        }
+        public IActionResult KategoriDetay()
+        {
+            return View();
+        }
+
+    }
 }

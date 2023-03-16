@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Home\NewFolder\" />
     <Folder Include="wwwroot\Temalar\Tema2\examples\" />
   </ItemGroup>
 
