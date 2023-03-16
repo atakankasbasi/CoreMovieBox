@@ -16,13 +16,11 @@
 
     @await Component.InvokeAsync("CategoryDetailsMovieList")
 
-
-
     @await Component.InvokeAsync("Interview")
 
     @await Html.PartialAsync("~/Views/PartialLayout/CategoryDetailPage/Comment.cshtml")
 
-    @await Html.PartialAsync("~/Views/PartialLayout/PhotoGallery.cshtml")
+    @await Html.PartialAsync("~/Views/PartialLayout/CategoryDetailPage/PhotoGallery.cshtml")
 
     @await Html.PartialAsync("~/Views/PartialLayout/CategoryDetailPage/FooterPartial.cshtml")
 

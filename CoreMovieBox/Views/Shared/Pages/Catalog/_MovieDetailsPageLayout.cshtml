@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -10,47 +9,69 @@
 @await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/HeadPartial.cshtml")
 
 <body>
-	@await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/NavbarPartial.cshtml")
+    @await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/NavbarPartial.cshtml")
+    @await Component.InvokeAsync("HomeSlider2")
+ 
+    <div class="w3l-ab-grids py-5">
+        <div class="container py-lg-4">
+            <div class="row ab-grids-sec align-items-center">
+                <div class="col-lg-6 ab-right">
+                    <img class="img-fluid" src="https://cdn.networkokulu.net/wp-content/uploads/2021/03/the-founder.jpg">
+                </div>
+                <div class="col-lg-6 ab-left pl-lg-4 mt-lg-0 mt-5">
+                    <h3 class="hny-title">Great Entertainment</h3>
+                    <p class="mt-3">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
+                        molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
+                        Nunc non risus in justo convallis feugiatLorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
+                        molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
+                        Nunc non risus in justo convallis feugiat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
+                        molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
+                        Nunc non risus in justo convallis feugiat.
+                    </p>
 
-	<div class="w3l-breadcrumbs">
-		<nav id="breadcrumbs" class="breadcrumbs">
-			<div class="container page-wrapper">
-				<a href="index.html">Home</a> » <span class="breadcrumb_last" aria-current="page">About</span>
-			</div>
-		</nav>
-	</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container py-lg-4">
+        <div class="row ab-grids-sec align-items-center">
+
+            <div class="col-lg-6 ab-left pl-lg-4 mt-lg-0 mt-5">
+                <h3 class="hny-title">Great Entertainment</h3>
+                <p class="mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
+                    molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
+                    Nunc non risus in justo convallis feugiatLorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
+                    molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
+                    Nunc non risus in justo convallis feugiat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
+                    molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
+                    Nunc non risus in justo convallis feugiat.
+                </p>
+
+            </div>
+            <div class="col-lg-6 ab-right">
+                <img class="img-fluid" src="https://filmhafizasi.com/wp-content/uploads/2017/04/founder1.jpg">
+            </div>
+        </div>
+    </div>
+
+  
+
+    @await Component.InvokeAsync("Actor")
+
+    @await Component.InvokeAsync("Testimonial")
+
+    @await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/PhotoGallery.cshtml")
+
+    @await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/NewReleases.cshtml")
 
 
+    @await Component.InvokeAsync("CommentList")
 
-	<div class="w3l-ab-grids py-5">
-		<div class="container py-lg-4">
-			<div class="row ab-grids-sec align-items-center">
-				<div class="col-lg-6 ab-right">
-					<img class="img-fluid" src="https://cdn.networkokulu.net/wp-content/uploads/2021/03/the-founder.jpg">
-				</div>
-				<div class="col-lg-6 ab-left pl-lg-4 mt-lg-0 mt-5">
-					<h3 class="hny-title">Great Entertainment</h3>
-					<p class="mt-3">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
-						molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
-						Nunc non risus in justo convallis feugiat.
-					</p>
-					<div class="ready-more mt-4">
-						<a href="#" class="btn read-button">Read More <span class="fa fa-angle-double-right ml-2" aria-hidden="true"></span></a>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	@await Component.InvokeAsync("Actor")
-
-	@await Component.InvokeAsync("Testimonial")
-
-	@await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/NewReleases.cshtml")
-
-	@await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/FooterPartial.cshtml")
+    @await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/FooterPartial.cshtml")
 
 </body>
 
