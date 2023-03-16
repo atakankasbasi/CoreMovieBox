@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="zxx">
+
+@await Html.PartialAsync("~/Views/PartialLayout/HomePage/HeadPartial.cshtml")
+
+<body>
+
+    @await Html.PartialAsync("~/Views/PartialLayout/HomePage/NavbarPartial.cshtml")
+
+    @await Component.InvokeAsync("HomeSlider")
+
+    @await Component.InvokeAsync("PopularMovies")
+
+    @await Component.InvokeAsync("NewReleases")
+
+    @await Component.InvokeAsync("HomeSlider2")
+
+    @*  @await Component.InvokeAsync("TabMenuBar")*@
+	
+    @await Component.InvokeAsync("Interview")
+    @await Html.PartialAsync("~/Views/PartialLayout/HomePage/FooterPartial.cshtml")
+
+    @RenderBody()
+</body>
+
+</html>
+
+@await Html.PartialAsync("~/Views/PartialLayout/HomePage/ScriptPartial.cshtml")

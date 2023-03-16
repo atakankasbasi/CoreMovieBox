@@ -1,0 +1,49 @@
+﻿@{
+	Layout = null;
+}
+
+
+<!doctype html>
+<html lang="zxx">
+
+@await Html.PartialAsync("~/Views/PartialLayout/CategoryListPage/HeadPartial.cshtml")
+
+<body>
+
+	@await Html.PartialAsync("~/Views/PartialLayout/CategoryListPage/NavbarPartial.cshtml")
+
+
+	<div class="w3l-breadcrumbs">
+		<nav id="breadcrumbs" class="breadcrumbs">
+			<div class="container page-wrapper">
+				<a href="index.html">Ana Sayfa</a> » <span class="breadcrumb_last" aria-current="page">Kategoriler</span>
+			</div>
+		</nav>
+	</div>
+
+
+
+	@await Component.InvokeAsync("PopulerFilmler")
+
+	@await Component.InvokeAsync("SonFilmler")
+
+
+	@await Component.InvokeAsync("Kategoriler")
+
+
+
+
+  @*  @await Html.PartialAsync("~/Views/PartialLayout/Comment.cshtml")*@
+    
+
+
+
+	@await Component.InvokeAsync("Interview")
+
+	@await Html.PartialAsync("~/Views/PartialLayout/CategoryListPage/FooterPartial.cshtml")
+
+</body>
+@RenderBody()
+</html>
+@await Html.PartialAsync("~/Views/PartialLayout/CategoryListPage/ScriptPartial.cshtml")
+

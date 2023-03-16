@@ -52,5 +52,15 @@ namespace CoreMovieBox.Controllers
             return View();
         }
 
-    }
+        public IActionResult FilmDetay()
+        {
+            return View();
+        }
+
+		public IActionResult Test()
+		{
+			return View();
+		}
+
+	}
 }
