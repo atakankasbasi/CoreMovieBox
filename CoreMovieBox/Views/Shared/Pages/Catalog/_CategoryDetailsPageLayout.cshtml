@@ -20,7 +20,9 @@
 
     @await Component.InvokeAsync("Interview")
 
-    @await Html.PartialAsync("~/Views/PartialLayout/Comment.cshtml")
+    @await Html.PartialAsync("~/Views/PartialLayout/CategoryDetailPage/Comment.cshtml")
+
+    @await Html.PartialAsync("~/Views/PartialLayout/PhotoGallery.cshtml")
 
     @await Html.PartialAsync("~/Views/PartialLayout/CategoryDetailPage/FooterPartial.cshtml")
 
@@ -30,3 +32,5 @@
 </html>
 
 @await Html.PartialAsync("~/Views/PartialLayout/CategoryDetailPage/ScriptPartial.cshtml")
+
+<script src="assets/js/lightbox-plus-jquery.min.js"></script>
