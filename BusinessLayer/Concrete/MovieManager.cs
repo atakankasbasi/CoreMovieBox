@@ -29,6 +29,11 @@ namespace BusinessLayer.Concrete
            return _movieDal.GetByID(id);
         }
 
+        public List<Movie> GetMoviesByID(int id)
+        {
+            return _movieDal.GetListByFilter(x => x.MovieID == id);
+        }
+
         public List<Movie> TGetList()
         {
            return _movieDal.GetList();

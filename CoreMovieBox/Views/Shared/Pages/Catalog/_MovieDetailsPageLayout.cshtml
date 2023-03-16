@@ -1,4 +1,6 @@
-﻿@{
+﻿@using EntityLayer.Concrete
+@model List<Movie>
+@{
     Layout = null;
 }
 
@@ -11,12 +13,14 @@
 <body>
     @await Html.PartialAsync("~/Views/PartialLayout/MovieDetailPage/NavbarPartial.cshtml")
     @await Component.InvokeAsync("HomeSlider2")
- 
+ @foreach (var item in Model)
+{
+    
     <div class="w3l-ab-grids py-5">
         <div class="container py-lg-4">
             <div class="row ab-grids-sec align-items-center">
                 <div class="col-lg-6 ab-right">
-                    <img class="img-fluid" src="https://cdn.networkokulu.net/wp-content/uploads/2021/03/the-founder.jpg">
+                    <img class="img-fluid" src="@item.Image1">
                 </div>
                 <div class="col-lg-6 ab-left pl-lg-4 mt-lg-0 mt-5">
                     <h3 class="hny-title">Great Entertainment</h3>
@@ -57,6 +61,7 @@
             </div>
         </div>
     </div>
+    }
 
   
 
