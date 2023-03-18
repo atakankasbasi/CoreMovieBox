@@ -5,13 +5,12 @@
 }
 <link rel="stylesheet" href="~/Temalar/Showroom/assets/css/Comment.css">
 <link rel="stylesheet" href="~/Temalar/Showroom/assets/css/style-liberty.css">
+<link rel="stylesheet" href="~/Temalar/Showroom/assets/css/style-starter.css">
 @await Component.InvokeAsync("HomeSlider2")
 
 @await Component.InvokeAsync("MovieDetails")
 
 @await Component.InvokeAsync("Actor")
-
-@await Component.InvokeAsync("Testimonial")
 
 @await Html.PartialAsync("~/Views/MovieDetail/MovieDetailPartialView/PhotoGallery.cshtml")
 

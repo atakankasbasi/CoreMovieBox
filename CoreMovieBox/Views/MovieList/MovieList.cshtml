@@ -4,17 +4,16 @@
     Layout = "~/Views/Shared/_CatologLayout.cshtml";
 }
 <link rel="stylesheet" href="~/Temalar/Showroom/assets/css/Comment.css">
+<link rel="stylesheet" href="~/Temalar/Showroom/assets/css/style-liberty.css">
 @await Component.InvokeAsync("HomeSlider2")
 
-@await Component.InvokeAsync("MovieDetails")
 
-@await Component.InvokeAsync("Actor")
+@await Component.InvokeAsync("CategoryDetailsMovieList")
 
-@await Component.InvokeAsync("Testimonial")
+@await Component.InvokeAsync("Interview")
+
+@await Html.PartialAsync("~/Views/MovieList/MovieListPartialView/Comment.cshtml")
 
 @await Html.PartialAsync("~/Views/MovieList/MovieListPartialView/PhotoGallery.cshtml")
-
-@await Html.PartialAsync("~/Views/MovieList/MovieListPartialView/NewReleases.cshtml")
-
 
 @await Component.InvokeAsync("CommentList")

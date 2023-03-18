@@ -34,39 +34,6 @@ namespace CoreMovieBox.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-
-        public IActionResult Landing()
-        {
-            return View();
-        }
-        public IActionResult Anasayfa()
-        {
-            return View();
-        }
-        public IActionResult KategoriList()
-        {
-            return View();
-        }
-        public IActionResult KategoriDetay()
-        {
-            return View();
-        }
-
-        public IActionResult FilmDetay()
-        {
-            return View();
-        }
-
-		public IActionResult Test()
-		{
-			return View();
-		}
-
-		public IActionResult Deneme()
-		{
-			return View();
-		}
-
         public IActionResult Catolog()
         {
             return View();
