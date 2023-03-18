@@ -67,5 +67,10 @@ namespace CoreMovieBox.Controllers
 			return View();
 		}
 
-	}
+        public IActionResult Catolog()
+        {
+            return View();
+        }
+
+    }
 }

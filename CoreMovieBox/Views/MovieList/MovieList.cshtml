@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_CatologLayout.cshtml";
+}
+
+@await Component.InvokeAsync("HomeSlider2")
+
+@await Component.InvokeAsync("MovieDetails")
+
+@await Component.InvokeAsync("Actor")
+
+@await Component.InvokeAsync("Testimonial")
+
+@await Html.PartialAsync("~/Views/MovieList/MovieListPartialView/PhotoGallery.cshtml")
+
+@await Html.PartialAsync("~/Views/MovieList/MovieListPartialView/NewReleases.cshtml")
+
+
+@await Component.InvokeAsync("CommentList")

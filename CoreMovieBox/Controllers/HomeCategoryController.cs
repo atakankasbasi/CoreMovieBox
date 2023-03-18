@@ -2,9 +2,9 @@
 
 namespace CoreMovieBox.Controllers
 {
-    public class MovieListController : Controller
+    public class HomeCategoryController : Controller
     {
-        public IActionResult MovieList()
+        public IActionResult HomeCategory()
         {
             return View();
         }

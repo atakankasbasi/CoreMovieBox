@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreMovieBox.Controllers
 {
-    public class MovieController : Controller
+    public class MoviemController : Controller
     {
         MovieManager movieManager = new MovieManager(new EfMovieDal());
         public IActionResult Index()

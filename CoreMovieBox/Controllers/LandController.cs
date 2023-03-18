@@ -2,9 +2,9 @@
 
 namespace CoreMovieBox.Controllers
 {
-    public class MovieListController : Controller
+    public class LandController : Controller
     {
-        public IActionResult MovieList()
+        public IActionResult Land()
         {
             return View();
         }

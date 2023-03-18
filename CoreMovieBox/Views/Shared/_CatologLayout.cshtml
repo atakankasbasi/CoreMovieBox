@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="zxx">
+
+@await Html.PartialAsync("~/Views/Home/HomePartialView/HeadPartial.cshtml")
+
+<body>
+
+    @await Html.PartialAsync("~/Views/Home/HomePartialView/NavbarPartial.cshtml")
+
+    @RenderBody()
+
+
+
+
+    @await Html.PartialAsync("~/Views/Home/HomePartialView/FooterPartial.cshtml")
+
+   
+</body>
+
+</html>
+
+@await Html.PartialAsync("~/Views/Home/HomePartialView/ScriptPartial.cshtml")
