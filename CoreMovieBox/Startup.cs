@@ -39,7 +39,7 @@ namespace CoreMovieBox
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseStatusCodePagesWithReExecute("/Error/Error","?code={0}");
+            app.UseStatusCodePagesWithReExecute("/Home/ErrorPage","?code={0}");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -52,7 +52,7 @@ namespace CoreMovieBox
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Land}/{action=Land}/{id?}");
+                    pattern: "{controller=Home}/{action=Land}/{id?}");
             });
         }
     }

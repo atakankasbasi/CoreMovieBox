@@ -11,6 +11,7 @@ namespace CoreMovieBox.Controllers
 {
     public class HomeController : Controller
     {
+        #region Methods
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -33,8 +34,17 @@ namespace CoreMovieBox.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        public IActionResult Catolog()
+        #endregion
+ 
+        public IActionResult ErrorPage(int code)
+        {
+            return View();
+        }
+        public IActionResult Land()
+		{
+			return View();
+		}
+		public IActionResult Catolog()
         {
             return View();
         }
