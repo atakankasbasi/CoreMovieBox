@@ -2,16 +2,15 @@
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CoreMovieBox.Controllers
+namespace CoreMovieBox.ViewComponents.CategoryByMovie
 {
-    public class MovieDetailController : Controller
+    public class CategoryByMovie : ViewComponent
     {
         MovieManager movieManager = new MovieManager(new EfMovieDal());
-        public IActionResult MovieDetail(int id)
+        public IViewComponentResult Invoke(int id)
         {
-            var values = movieManager.GetMoviesByID(id);
+            var values = movieManager.TGetListByFilter(x => x.CategoryID == id);
             return View(values);
         }
-
     }
 }

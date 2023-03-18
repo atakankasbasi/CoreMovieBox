@@ -53,5 +53,7 @@ namespace BusinessLayer.Concrete
         {
            _movieDal.Update(t);
         }
+
+       
     }
 }

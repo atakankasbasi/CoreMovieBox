@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,11 @@ namespace BusinessLayer.Concrete
         public void TUpdate(Category t)
         {
             _categoryDal.Update(t);
+        }
+
+        public List<Category> GetCategoryByID(int id)
+        {
+            return _categoryDal.GetListByFilter(x => x.CategoryID == id);
         }
     }
 }

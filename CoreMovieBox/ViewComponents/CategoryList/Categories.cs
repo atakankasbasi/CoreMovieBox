@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CoreMovieBox.ViewComponents.HomeCategory
 {

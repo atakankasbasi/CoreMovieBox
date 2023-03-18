@@ -16,30 +16,30 @@
 			</div>
 			<div class="w3l-populohny-grids">
 				@foreach (var item in Model)
-			   {
-				   
-				<div class="item vhny-grid">
-					<div class="box16">
+				{
+
+					<div class="item vhny-grid">
+						<div class="box16">
 							<a href="/MovieDetail/MovieDetail/@item.MovieID/">
-							<figure>
-								<img class="img-fluid" src="@item.Image1" alt="">
-							</figure>
-							<div class="box-content">
-								<h3 class="title">@item.Name</h3>
-								<h4>
-									<span class="post">
-										<span class="fa fa-clock-o"> </span> 1h 4m
+								<figure>
+									<img class="img-fluid" src="@item.Image1" alt="">
+								</figure>
+								<div class="box-content">
+									<h3 class="title">@item.Name</h3>
+									<h4>
+										<span class="post">
+											<span class="fa fa-clock-o"> </span> 1h 4m
 
-									</span>
+										</span>
 
-									<span class="post fa fa-heart text-right"></span>
-								</h4>
-							</div>
-							<span class="fa fa-play video-icon" aria-hidden="true"></span>
-						</a>
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+
 					</div>
-
-				</div>
 				}
 
 

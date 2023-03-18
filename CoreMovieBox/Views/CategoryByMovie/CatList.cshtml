@@ -1,21 +1,21 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_CatologLayout.cshtml";
 }
 
 <link rel="stylesheet" href="~/Temalar/Showroom/assets/css/Comment.css">
+<link rel="stylesheet" href="~/Temalar/Showroom/assets/css/style-liberty.css">
 
 @await Component.InvokeAsync("BottomSlider")
 
 
-@await Component.InvokeAsync("PopulerMovieAndTvSeries")
 
-@await Component.InvokeAsync("LastMovies")
-
-
-@await Component.InvokeAsync("Categories")
+@await Component.InvokeAsync("CategoryByMovie" , new { id =  ViewBag.x  })
 
 
-@await Component.InvokeAsync("Interview")
+
+
+
+
+
 
