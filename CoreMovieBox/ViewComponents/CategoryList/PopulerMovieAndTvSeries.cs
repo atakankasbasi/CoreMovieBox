@@ -2,7 +2,7 @@
 
 namespace CoreMovieBox.ViewComponents.HomeCategory
 {
-	public class SonFilmler : ViewComponent
+	public class PopulerMovieAndTvSeries : ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace CoreMovieBox.ViewComponents
 {
-	public class HomeSlider : ViewComponent
+	public class TopSlider : ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{

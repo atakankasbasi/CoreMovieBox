@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CoreMovieBox.ViewComponents.MovieDetails
+namespace CoreMovieBox.ViewComponents.HomeCategory
 {
-	public class Testimonial : ViewComponent
+	public class LastMovies : ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{

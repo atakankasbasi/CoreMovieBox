@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CoreMovieBox.ViewComponents.HomeCategory
+namespace CoreMovieBox.ViewComponents
 {
-	public class PopulerFilmler : ViewComponent
+	public class BottomSlider : ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{
