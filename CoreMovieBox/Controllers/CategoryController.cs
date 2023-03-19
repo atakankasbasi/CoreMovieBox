@@ -4,19 +4,18 @@ using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CoreMovieBox.Areas.Admin.Controllers
+namespace CoreMovieBox.Controllers
 {
-    [Area("Admin")]
-  
+
     public class CategoryController : Controller
     {
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
         public IActionResult Index()
         {
-            var values = cm.TGetListByFilter(x => x.Status == true);
+            var values = cm.TGetListByFilter(x=>x.Status==true);
             return View(values);
         }
-        [HttpGet]
+        [HttpGet]       
         public IActionResult AddCategory()
         {
             return View();
@@ -26,7 +25,7 @@ namespace CoreMovieBox.Areas.Admin.Controllers
         {
             category.Status = true;
             cm.TInsert(category);
-            return RedirectToAction("Index", "Category", new { area = "Admin" });
+            return RedirectToAction("Index");
         }
         public IActionResult DeleteCategory(int id)
         {
@@ -34,7 +33,7 @@ namespace CoreMovieBox.Areas.Admin.Controllers
             var value = cm.TGetByID(id);
             value.Status = false;
             cm.TUpdate(value);
-            return RedirectToAction("Index", "Category", new { area = "Admin" });
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult UpdateCategory(int id)
@@ -45,8 +44,9 @@ namespace CoreMovieBox.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult UpdateCategory(Category category)
         {
+            category.Status = true;
             cm.TUpdate(category);
-            return RedirectToAction("Index", "Category", new { area = "Admin" });
+            return RedirectToAction("Index");
         }
 
     }

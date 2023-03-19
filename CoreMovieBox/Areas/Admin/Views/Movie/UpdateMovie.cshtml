@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model Movie
+@{
+    ViewData["Title"] = "UpdateMovie";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="MovieID" />
+    <label>Film Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <label>İçerik</label>
+    <input type="text" class="form-control" asp-for="Content" />
+    <br />
+    <label>Başlık Resmi</label>
+    <input type="text" class="form-control" asp-for="HeaderImage" />
+    <br />
+    <label>Film Resmi</label>
+    <input type="text" class="form-control" asp-for="Image1" />
+    <br />
+    <label>IMDB</label>
+    <input type="text" class="form-control" asp-for="MovieScore" />
+    <br />
+    <label>Vizyona Çıkış tarihi</label>
+    <input type="text" class="form-control" asp-for="MovieYear" />
+    <br />
+    <button class="btn btn-info">Filmi Güncelle</button>
+</form>
+

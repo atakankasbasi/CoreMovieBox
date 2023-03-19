@@ -1,0 +1,46 @@
+﻿@using EntityLayer.Concrete
+@model List<Movie>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Film Adı</th>
+        <th>İçerik</th>
+        <th>Başlık Resmi</th>
+        <th>Film Resmi</th>
+        <th>İçerik Resmi</th>
+        <th>İçerik Resmi2</th>
+        <th>İçerik Resmi3</th>
+        <th>IMDB</th>
+        <th>Vizyona Çıkış Tarihi</th>
+        <th>Kategori</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.MovieID</th>
+            <td>@item.Name</td>
+            <td>@item.Content</td>
+            <td>@item.HeaderImage</td>
+            <td>@item.Image1</td>
+            <td>@item.Image2</td>
+            <td>@item.Image3</td>
+            <td>@item.Image4</td>
+            <td>@item.MovieScore</td>
+            <td>@item.MovieYear</td>
+            <td>@item.CategoryID</td>
+            <td>@item.Status</td>
+            <td><a href="/Admin/Movie/DeleteMovie/@item.MovieID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/Movie/UpdateMovie/@item.MovieID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/Movie/AddMovie" class="btn btn-primary">Yeni Kategori Girişi</a>
+

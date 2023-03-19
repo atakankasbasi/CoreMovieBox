@@ -1,0 +1,13 @@
+﻿@using EntityLayer.Concrete
+@model Category
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Kategori Adı</label>
+    <input type="text" class="form-control" asp-for="CategoryName" />
+    <br/>
+    <button class="btn btn-info">Kategoriyi Ekle</button>
+</form>
