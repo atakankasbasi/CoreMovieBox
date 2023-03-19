@@ -32,14 +32,7 @@ namespace CoreMovieBox.Areas.Admin.Controllers
         {
 
             var value = cm.TGetByID(id);
-            if (value.Status)
-            {
-                value.Status = false;
-            }
-            else
-            {
-                value.Status = true;
-            }
+            value.Status = false;
             cm.TUpdate(value);
             return RedirectToAction("Index", "Category", new { area = "Admin" });
         }
@@ -53,7 +46,7 @@ namespace CoreMovieBox.Areas.Admin.Controllers
         public IActionResult UpdateCategory(Category category)
         {
             cm.TUpdate(category);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Category", new { area = "Admin" });
         }
 
     }

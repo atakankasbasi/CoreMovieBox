@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model List<Top10MovieList>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Image</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MovieID</td>
+            <td>@item.Image</td>
+            <td><a href="/Admin/Top10Movie/DeleteTop10Movie/@item.MovieID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/Top10Movie/UpdateTop10Movie/@item.MovieID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/Top10Movie/AddTop10Movie" class="btn btn-primary">Yeni Film Girişi</a>
+

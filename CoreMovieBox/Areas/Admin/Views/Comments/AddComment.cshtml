@@ -1,0 +1,22 @@
+﻿@using EntityLayer.Concrete
+@model Comment
+@{
+    ViewData["Title"] = "AddComment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Kullanıcı Adı</label>
+    <input type="text" class="form-control" asp-for="Username" />
+    <br />
+    <label>İçerik</label>
+    <input type="text" class="form-control" asp-for="Content" />
+    <br />
+    <label>Tarih</label>
+    <input type="text" class="form-control" asp-for="Date" />
+    <br />
+    <label>Durum</label>
+    <input type="text" class="form-control" asp-for="Status" />
+    <br />
+    <button class="btn btn-info">Yorum Ekle</button>
+</form>
