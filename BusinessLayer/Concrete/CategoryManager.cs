@@ -54,5 +54,6 @@ namespace BusinessLayer.Concrete
         {
             return _categoryDal.GetListByFilter(x => x.CategoryID == id);
         }
+      
     }
 }

@@ -9,7 +9,7 @@ namespace CoreMovieBox.Controllers
 		CategoryManager categoryManager = new CategoryManager(new EfCategoryDal()); 
         public IActionResult CategoryList()
         {
-            var values = categoryManager.TGetList();
+            var values = categoryManager.TGetListByFilter(x => x.Status == true);
             return View(values);
         }
 

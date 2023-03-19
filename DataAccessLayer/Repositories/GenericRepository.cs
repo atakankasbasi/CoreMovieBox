@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace DataAccessLayer.Repositories
             context.Remove(t);
             context.SaveChanges();
         }
+
 
         public T GetByID(int id)
         {

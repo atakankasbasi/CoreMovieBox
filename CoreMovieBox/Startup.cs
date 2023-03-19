@@ -54,6 +54,13 @@ namespace CoreMovieBox
                     name: "default",
                     pattern: "{controller=Home}/{action=Land}/{id?}");
             });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                  name: "areas",
+                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+            });
         }
     }
 }
