@@ -10,10 +10,10 @@ namespace CoreMovieBox.Areas.Admin.Controllers
     [Area("Admin")] 
     public class Top10MovieController : Controller
     {
-        Context c = new Context();
+        Top10MovieListManager top10MovieListManager = new Top10MovieListManager(new EfTop10MovieListDal());
         public IActionResult Index()
         {
-            var values = c.Top10MovieLists.ToList();
+            var values = top10MovieListManager.TGetList();
             return View(values);
         }
 
@@ -25,16 +25,14 @@ namespace CoreMovieBox.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult AddTop10Movie(Top10MovieList top10MovieList)
         {
-            c.Top10MovieLists.Add(top10MovieList);
-            c.SaveChanges();
+            top10MovieListManager.TInsert(top10MovieList);
             return RedirectToAction("Index", "Top10Movie", new { area = "Admin" });
         }
         public IActionResult DeleteTop10Movie(int id)
         {
-            var value = c.Top10MovieLists.Find(id);
-            c.Top10MovieLists.Remove(value);
-            c.SaveChanges();
-            return RedirectToAction("Index", "Top10Movie", new { area = "Admin" });
+            
+            top10MovieListManager.TDelete(new Top10MovieList { MovieID = id});
+            return RedirectToAction("Index");
         }
     }
 }

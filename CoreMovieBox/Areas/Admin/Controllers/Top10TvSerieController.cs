@@ -16,18 +16,18 @@ namespace CoreMovieBox.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult AddTop10Movie()
+        public IActionResult AddTop10TvSerie()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult AddTop10Movie(Top10TvSerieList top10TvSerieList)
+        public IActionResult AddTop10TvSerie(Top10TvSerieList top10TvSerieList)
         {
             c.Top10TvSerieLists.Add(top10TvSerieList);
             c.SaveChanges();
             return RedirectToAction("Index", "Top10Movie", new { area = "Admin" });
         }
-        public IActionResult DeleteTop10Movie(int id)
+        public IActionResult DeleteTop10TvSerie(int id)
         {
             var value = c.Top10TvSerieLists.Find(id);
             c.Top10TvSerieLists.Remove(value);
