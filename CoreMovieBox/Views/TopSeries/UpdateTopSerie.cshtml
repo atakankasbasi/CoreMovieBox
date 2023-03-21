@@ -1,14 +1,16 @@
 ﻿@using EntityLayer.Concrete
-@model Top10MovieList
-
+@model Top10TvSerieList
 @{
-    ViewData["Title"] = "AddTop10Movie";
+    ViewData["Title"] = "UpdateTopSerie";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h1>UpdateTopSerie</h1>
+
 <form method="post">
+    <input type="hidden" asp-for="TvSerieID" />
     <label>Resim Linki</label>
     <input type="text" class="form-control" asp-for="Image" />
     <br />
-    <button class="btn btn-info">Image Ekle</button>
+    <button class="btn btn-info">Image Güncelle</button>
 </form>

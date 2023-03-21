@@ -1,0 +1,15 @@
+﻿@using EntityLayer.Concrete
+@model Top10MovieList
+@{
+    ViewData["Title"] = "AddTopMovie";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>AddTopMovie</h1>
+
+<form method="post">
+    <label>Resim Linki</label>
+    <input type="text" class="form-control" asp-for="Image" />
+    <br />
+    <button class="btn btn-info">Image Ekle</button>
+</form>
